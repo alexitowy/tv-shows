@@ -1,8 +1,11 @@
-.slider {
+.slider_search {
   display: flex;
   overflow-x: scroll;
   width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
 .title {
   font-size: 0.75rem;
   white-space: nowrap;
@@ -10,11 +13,13 @@
   width: 100%;
   overflow: hidden;
 }
+
 .header {
   padding: 10px;
 }
-.custom_card {
-  margin: 8px;
-  width: 150px;
-  min-width: 120px;
+
+.custom_card_search {
+    margin: 8px;
+    width: calc(50% - 16px);
+    min-width: 120px;
 }

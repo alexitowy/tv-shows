@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Busqueda</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Buscar..." (ionInput)="search($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="slider_search" *ngIf="lstSearch">
+    <ion-card class="custom_card_search" *ngFor="let show of lstSearch" (click)="goToDetails(show.id)">
+      <img [alt]="show.name"
+        [src]="show.poster_path ? 'https://image.tmdb.org/t/p/original'+show.poster_path : 'http://via.placeholder.com/500x750'"
+        loading="lazy" />
+      <ion-card-header class="header">
+        <ion-card-title class="title">{{ show.name}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>

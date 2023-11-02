@@ -1,20 +1,34 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Listado de Tv shows
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="search()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list *ngFor="let genre of genres">
+    <ion-list-header>
+      <ion-label>{{ genre.name }}</ion-label>
+    </ion-list-header>
+    <div>
+      <div class="slider" *ngIf="genre.shows">
+        <ion-card class="custom_card" *ngFor="let show of genre.shows" (click)="goToDetails(show.id)">
+          <img [alt]="show.name"
+            [src]="show.poster_path ? 'https://image.tmdb.org/t/p/original'+show.poster_path : 'http://via.placeholder.com/500x750'"
+            loading="lazy" />
+          <ion-card-header class="header">
+            <ion-card-title class="title">{{ show.name}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </div>
+  </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>
