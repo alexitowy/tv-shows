@@ -19,9 +19,6 @@
         <ion-text color="dark">
           <h3>Fecha de lanzamiento: {{ show.first_air_date | date: 'dd/MM/yyyy' }}</h3>
         </ion-text>
-        <ion-text color="dark">
-          <h3>Autores</h3>
-        </ion-text>
         <ion-chip>Temporadas: <span class="fw-bold">{{show.number_of_seasons}}</span></ion-chip> <ion-chip>Episodios:
           <span class="fw-bold">{{show.number_of_episodes}}</span></ion-chip>
         <ion-text color="dark" *ngIf="show.overview !== ''">
@@ -31,10 +28,8 @@
           <p>{{ show.overview }}</p>
         </ion-text>
         <ion-text color="dark" class="author" *ngIf="show.created_by.length > 0">
-          <ion-label>Autores: </ion-label>
-          <ng-container *ngFor="let author of show.created_by">
-            {{ author.name }},
-          </ng-container>
+          <ion-label class="fw-bold">Autores: </ion-label>
+          {{ show.authors }}
         </ion-text>
       </ion-card-content>
     </ion-card>

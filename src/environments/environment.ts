@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
   apiUrl: 'https://api.themoviedb.org/3',
+  token:
+    'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMmUxNTk3MzRlZmVjY2U5MTM4N2QyY2VjMTI4ZGY5YSIsInN1YiI6IjY1NDJjZGIwYjA5YmRlMDExZjdjNjc3MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._A7AkjY6GJfPEeC5Bqk3eL54f1nLxrcCPJLl_3FU2iM',
 };
 
 /*

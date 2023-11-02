@@ -29,6 +29,9 @@ export class DetailsPage implements OnInit, OnDestroy {
       }
       this.events.add(
         this.tvService.getDetailsByIdShow(idShow).subscribe((show: any) => {
+          show.authors = show.created_by
+            .map((author: any) => author.name)
+            .join(',');
           this.show = show;
         })
       );

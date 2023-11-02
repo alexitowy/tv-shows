@@ -1,8 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
-import { TvService } from '../data/services/tv.service';
-import { Genre } from '../models/interfaces/genre';
+import { TvService } from '../../data/services/tv.service';
+import { Genre } from '../../models/interfaces/genre';
 
 @Component({
   selector: 'app-home',

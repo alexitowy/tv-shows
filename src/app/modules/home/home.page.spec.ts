@@ -3,7 +3,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { HomePage } from './home.page';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { TvService } from '../data/services/tv.service';
+import { TvService } from '../../data/services/tv.service';
 
 describe('HomePage', () => {
   let component: HomePage;
